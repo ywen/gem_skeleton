@@ -36,6 +36,8 @@ module GemSkeleton
       template(File.join("newgem/LICENSE.tt"),               File.join(target, "LICENSE"),                opts)
       template(File.join("newgem/README.md.tt"),             File.join(target, "README.md"),              opts)
       template(File.join("newgem/gitignore.tt"),             File.join(target, ".gitignore"),             opts)
+      template(File.join("newgem/Guardfile.tt"),             File.join(target, "Guardfile"),              opts)
+      template(File.join("newgem/rvmrc.tt"),                    File.join(target, ".rvmrc"),              opts)
       template(File.join("newgem/newgem.gemspec.tt"),        File.join(target, "#{name}.gemspec"),        opts)
       template(File.join("newgem/lib/newgem.rb.tt"),         File.join(target, "lib/#{name}.rb"),         opts)
       template(File.join("newgem/lib/newgem/version.rb.tt"), File.join(target, "lib/#{name}/version.rb"), opts)
