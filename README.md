@@ -35,7 +35,9 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```bash
+$ gem_skeleton make your-gem-name
+```
 
 ## Contributing
 
