@@ -4,9 +4,9 @@ require File.expand_path('../lib/gem_skeleton/version', __FILE__)
 Gem::Specification.new do |gem|
   gem.authors       = ["Yi Wen"]
   gem.email         = ["hayafirst@gmail.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
-  gem.homepage      = ""
+  gem.description   = %q{A command that make a gem skeleton with rspec in place}
+  gem.summary       = %q{The command copies part of bundle gem code and add rspec and rvmrc support into the gem skeleton}
+  gem.homepage      = "https://github.com/ywen/gem_skeleton"
 
   gem.files         = `git ls-files`.split($\)
   gem.executables   = gem.files.grep(%r{^bin/}).map{ |f| File.basename(f) }
@@ -15,5 +15,4 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = GemSkeleton::VERSION
   gem.add_runtime_dependency(%q<thor>)
-  gem.add_runtime_dependency(%q<bundler>)
 end

@@ -1,6 +1,18 @@
 # GemSkeleton
 
-TODO: Write a gem description
+This gem provide a command for making a rubygem skeleton.
+
+It basically copied from ```bundle gem``` code and add some more templates and here is extra file list:
+
+* .rvmrc (which is ignored in .gitignore)
+* .rvmrc.template
+* .gemspec file: This is not new, But I add rspec related gems:
+** rspec
+** guard-spork
+** guard-rspec
+** cane
+** simplecov
+** growl-rspec
 
 ## Installation
 
