@@ -1,0 +1,4 @@
+#!/usr/bin/env ruby
+require_relative '../lib/gem_skeleton'
+require_relative '../lib/gem_skeleton/cli'
+GemSkeleton::CLI.start
