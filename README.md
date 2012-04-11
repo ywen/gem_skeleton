@@ -7,13 +7,12 @@ It basically copied from ```bundle gem``` code and add some more templates and h
 * .rvmrc (which is ignored in .gitignore)
 * .rvmrc.template
 * .gemspec file: This is not new, But I add rspec related gems and code quality control gems:
-
-** rspec
-** guard-spork
-** guard-rspec
-** cane
-** simplecov
-** growl-rspec
+    * rspec
+    * guard-spork
+    * guard-rspec
+    * cane
+    * simplecov
+    * growl-rspec
 
 ## Installation
 
