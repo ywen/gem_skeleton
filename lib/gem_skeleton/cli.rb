@@ -9,6 +9,13 @@ module GemSkeleton
 
     default_task :make
 
+    class << self
+      def source_root
+        File.expand_path(File.join(File.dirname(__FILE__), 'templates'))
+      end
+
+    end
+
     desc "make GEM", "Creates a skeleton for creating a rubygem"
     long_desc <<-D
       Make a gem skeleton, with rspec goodies, tasks for settingup ci,
@@ -37,14 +44,16 @@ module GemSkeleton
       template(File.join("newgem/README.md.tt"),             File.join(target, "README.md"),              opts)
       template(File.join("newgem/gitignore.tt"),             File.join(target, ".gitignore"),             opts)
       template(File.join("newgem/Guardfile.tt"),             File.join(target, "Guardfile"),              opts)
-      template(File.join("newgem/rvmrc.tt"),                    File.join(target, ".rvmrc"),              opts)
+      template(File.join("newgem/rvmrc.tt"),                 File.join(target, ".rvmrc"),              opts)
+      template(File.join("newgem/rvmrc.tt"),                 File.join(target, ".rvmrc.template"),      opts)
       template(File.join("newgem/newgem.gemspec.tt"),        File.join(target, "#{name}.gemspec"),        opts)
       template(File.join("newgem/lib/newgem.rb.tt"),         File.join(target, "lib/#{name}.rb"),         opts)
       template(File.join("newgem/lib/newgem/version.rb.tt"), File.join(target, "lib/#{name}/version.rb"), opts)
+      template(File.join("newgem/spec/spec_helper.rb.tt"), File.join(target, "spec/spec_helper.rb"), opts)
       if options[:bin]
         template(File.join("newgem/bin/newgem.tt"),          File.join(target, 'bin', name),              opts)
       end
-      Bundler.ui.info "Initializating git repo in #{target}"
+      puts "Initializating git repo in #{target}"
       Dir.chdir(target) { `git init`; `git add .` }
     end
   end
