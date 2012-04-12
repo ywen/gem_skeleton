@@ -10,7 +10,7 @@ SimpleCov.start do
     end
   end
 end
-require 'spork'
+require 'guard/spork'
 
 Spork.prefork do
   require 'rspec/core'
@@ -23,5 +23,7 @@ Spork.prefork do
 end
 
 Spork.each_run do
+  Dir["#{File.dirname(__FILE__)}/../lib/<%=config[:name]%>.rb"].each {|f| load f}
+  Dir["#{File.dirname(__FILE__)}/../lib/<%=config[:name]%>/*.rb"].each {|f| load f}
 end
 
