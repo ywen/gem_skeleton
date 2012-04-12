@@ -10,6 +10,7 @@ SimpleCov.start do
     end
   end
 end
+require 'spork'
 require 'guard/spork'
 
 Spork.prefork do
