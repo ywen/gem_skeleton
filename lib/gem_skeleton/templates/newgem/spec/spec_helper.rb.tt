@@ -24,7 +24,7 @@ Spork.prefork do
 end
 
 Spork.each_run do
-  Dir["#{File.dirname(__FILE__)}/../lib/<%=config[:name]%>.rb"].each {|f| load f}
+  load "#{File.dirname(__FILE__)}/../lib/<%=config[:name]%>.rb"
   Dir["#{File.dirname(__FILE__)}/../lib/<%=config[:name]%>/*.rb"].each {|f| load f}
 end
 
