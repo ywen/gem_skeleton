@@ -1,4 +1,6 @@
-require "<%=config[:name]%>/version"
+Dir["#{File.dirname(__FILE__)}/<%=config[:name]%>/**/*.rb"].each do |f| 
+  require f
+end
 
 <%- config[:constant_array].each_with_index do |c,i| -%>
 <%= '  '*i %>module <%= c %>
