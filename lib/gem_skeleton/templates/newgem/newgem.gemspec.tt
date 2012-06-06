@@ -18,7 +18,6 @@ Gem::Specification.new do |gem|
   gem.add_development_dependency(%q<rake>)
   gem.add_development_dependency(%q<guard-spork>)
   gem.add_development_dependency(%q<guard-rspec>)
-  gem.add_development_dependency(%q<tailor>, "0.1.5")
   gem.add_development_dependency(%q<cane>)
   gem.add_development_dependency(%q<simplecov>)
   gem.add_development_dependency(%q<growl-rspec>)
