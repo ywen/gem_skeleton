@@ -49,7 +49,6 @@ module GemSkeleton
       template(File.join("newgem/rspec.tt"),                 File.join(target, ".rspec"),      opts)
       template(File.join("newgem/newgem.gemspec.tt"),        File.join(target, "#{name}.gemspec"),        opts)
       template(File.join("newgem/lib/newgem.rb.tt"),         File.join(target, "lib/#{name}.rb"),         opts)
-      template(File.join("newgem/lib/newgem/version.rb.tt"), File.join(target, "lib/#{name}/version.rb"), opts)
       template(File.join("newgem/spec/spec_helper.rb.tt"), File.join(target, "spec/spec_helper.rb"), opts)
       template(File.join("newgem/tasks/rspec.rake.tt"), File.join(target, "tasks/rspec.rake"), opts)
       template(File.join("newgem/tasks/ci.rake.tt"), File.join(target, "tasks/ci.rake"), opts)
