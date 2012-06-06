@@ -1,6 +1,4 @@
 # -*- encoding: utf-8 -*-
-require File.expand_path('../lib/gem_skeleton/version', __FILE__)
-
 Gem::Specification.new do |gem|
   gem.authors       = ["Yi Wen"]
   gem.email         = ["hayafirst@gmail.com"]
@@ -13,6 +11,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "gem_skeleton"
   gem.require_paths = ["lib"]
-  gem.version       = GemSkeleton::VERSION
+  gem.version       = "0.0.9"
   gem.add_runtime_dependency(%q<thor>)
 end
