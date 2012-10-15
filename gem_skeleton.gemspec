@@ -11,6 +11,6 @@ Gem::Specification.new do |gem|
   gem.test_files    = gem.files.grep(%r{^(test|spec|features)/})
   gem.name          = "gem_skeleton"
   gem.require_paths = ["lib"]
-  gem.version       = "0.0.9"
+  gem.version       = "0.1.0"
   gem.add_runtime_dependency(%q<thor>)
 end
