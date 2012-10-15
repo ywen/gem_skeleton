@@ -1,15 +1,9 @@
 require 'simplecov'
 SimpleCov.start do
-  SimpleCov.at_exit do
-    threshold = 100
-    SimpleCov.result.format!
-    if SimpleCov.result.covered_percent != threshold
-      actual_coverage = SimpleCov.result.covered_percent
-      puts "The coverage is #{actual_coverage}%. It has to be 100%"
-      exit 1
-    end
-  end
+  SimpleCov.refuse_coverage_drop
+  SimpleCov.minimum_coverage 100
 end
+
 require 'spork'
 require 'guard/spork'
 
