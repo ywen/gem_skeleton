@@ -12,7 +12,7 @@ It basically copied from ```bundle gem``` code and add some more templates and h
     * cane
     * simplecov
     * growl-rspec
-* Guardfile, containing the rspec and spork configurations
+* Guardfile, containing the rspec configurations
 * spec/spec_helper.rb
 * tasks/rspec.rb - the rspec task file
 * tasks/ci.rb - the tasks for running ci task on a continuous integration server
