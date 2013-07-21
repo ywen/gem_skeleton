@@ -14,4 +14,5 @@ Gem::Specification.new do |gem|
   gem.require_paths = ["lib"]
   gem.version       = "0.1.2"
   gem.add_runtime_dependency(%q<thor>)
+  gem.add_development_dependency(%q<rake>)
 end
