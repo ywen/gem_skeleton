@@ -19,7 +19,7 @@ module GemSkeleton
     desc "make GEM", "Creates a skeleton for creating a rubygem"
     long_desc <<-D
       Make a gem skeleton, with rspec goodies, tasks for settingup ci,
-      a Guardfile, a .rvmrc.template, etc.
+      a Guardfile, a .ruby-version.template, etc.
     D
     method_option :bin, :type => :boolean, :default => false, :aliases => '-b', :banner => "Generate a binary for your library."
     def make(name)
@@ -44,8 +44,8 @@ module GemSkeleton
       template(File.join("newgem/README.md.tt"),             File.join(target, "README.md"),              opts)
       template(File.join("newgem/gitignore.tt"),             File.join(target, ".gitignore"),             opts)
       template(File.join("newgem/Guardfile.tt"),             File.join(target, "Guardfile"),              opts)
-      template(File.join("newgem/rvmrc.tt"),                 File.join(target, ".rvmrc"),              opts)
-      template(File.join("newgem/rvmrc.tt"),                 File.join(target, ".rvmrc.template"),      opts)
+      template(File.join("newgem/ruby-version.tt"),                 File.join(target, ".ruby-version"),              opts)
+      template(File.join("newgem/ruby-version.tt"),                 File.join(target, ".ruby-version.template"),      opts)
       template(File.join("newgem/rspec.tt"),                 File.join(target, ".rspec"),      opts)
       template(File.join("newgem/newgem.gemspec.tt"),        File.join(target, "#{name}.gemspec"),        opts)
       template(File.join("newgem/lib/newgem.rb.tt"),         File.join(target, "lib/#{name}.rb"),         opts)
