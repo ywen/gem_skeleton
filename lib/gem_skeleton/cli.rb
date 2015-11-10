@@ -1,4 +1,5 @@
 require 'bundler/vendored_thor'
+require 'thor'
 require 'rubygems/user_interaction'
 require 'rubygems/config_file'
 
