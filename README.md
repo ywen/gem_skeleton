@@ -6,12 +6,8 @@ It basically copied from ```bundle gem``` code and add some more templates and h
 
 * .ruby-version(which is ignored in .gitignore)
 * .ruby-version.template
-* .gemspec file: This is not new, But I add rspec related gems and code quality control gems:
+* .gemspec file: This is not new, But I add rspec related gems:
     * rspec
-    * guard-rspec
-    * cane
-    * simplecov
-    * growl-rspec
 * Guardfile, containing the rspec configurations
 * spec/spec_helper.rb
 * tasks/rspec.rb - the rspec task file
